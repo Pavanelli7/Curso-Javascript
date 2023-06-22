@@ -23,35 +23,7 @@ var possuiDoutorado = false;
 var empregoFuturo;
 var dinheiroNaConta = 0;
 
-if (nome) {
-    console.log('Nome é True');
-} else {
-    console.log('Nome é False');
-}
-
-if (idade) {
-    console.log('Idade é True');
-} else {
-    console.log('Idade é False');
-}
-
-if (possuiDoutorado) {
-    console.log('Doutorado é True');
-} else {
-    console.log('Doutorado é False');
-}
-
-if (empregoFuturo) {
-    console.log('True');
-} else {
-    console.log('Emprego Futuro é False');
-}
-
-if (dinheiroNaConta) {
-    console.log('Dinheirona Conta é True');
-} else {
-    console.log('Dinheiro na Conta é False');
-}
+console.log(!!nome, !!idade, !!possuiDoutorado, !!empregoFuturo, !!dinheiroNaConta);
 
 // Compare o total de habitantes do Brasil com China (valor em milhões)
 var brasil = 207;
