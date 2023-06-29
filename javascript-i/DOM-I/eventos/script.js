@@ -63,11 +63,13 @@ function handleKeyboard(event) {
     const tamanhoAtual = parseFloat(window.getComputedStyle(elemento).fontSize);
 
     if (event.key === '+') {
-      const novoTamanho = tamanhoAtual * 1.1; // Aumento de 20%
+      const novoTamanho = tamanhoAtual * 1.05; 
       elemento.style.fontSize = novoTamanho + 'px';
     } else if (event.key === '-') {
-      const novoTamanho = tamanhoAtual * 0.7; // Redução de 20%
+      const novoTamanho = tamanhoAtual * 0.95;
       elemento.style.fontSize = novoTamanho + 'px';
+    }  else if (event.shiftKey && event.key === 'Enter') {
+      elemento.style.fontSize = ''; 
     }
   });
 }
