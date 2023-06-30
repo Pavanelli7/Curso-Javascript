@@ -1,23 +1,19 @@
-const h1 = document.querySelector('h1');
-const animaisLista = document.querySelector('.animais-descricao');
+// Duplique o menu e adicione ele em copy
+const menu = document.querySelector('.menu');
+const copy = document.querySelector('.copy');
 
-h1.innerHTML = '<p>Novo Título</>'
+const cloneMenu = menu.cloneNode(true);
+copy.appendChild(cloneMenu);
 
-// console.log(animaisLista.innerText);
+// Selecione o primeiro DT da dl de Faq
+const faq = document.querySelector('.faq');
+const primeiroDt = faq.querySelector('dt');
 
-const lista = document.querySelector('.animais-lista');
+console.log(primeiroDt.innerText);
 
-console.log(lista.children[--lista.children.length]); // último filho
-console.log(lista.querySelector('li:last-child'));
+// Selecione o DD referente ao primeiro DT
+console.log(primeiroDt.nextElementSibling.innerText);
 
-
-
-
-// lista.parentElement; // pai
-// lista.parentElement.parentElement; // pai do pai
-// lista.previousElementSibling; // elemento acima
-// lista.nextElementSibling; // elemento abaixo
-
-// lista.children; // HTMLCollection com os filhos
-// lista.children[0]; // primeiro filho
-
+// Substitua o conteúdo html de .faq pelo de .animais
+const animais = document.querySelector('.animais');
+faq.innerHTML = animais.innerHTML;
